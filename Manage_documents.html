@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./App2.js">
+  </script>
+  <script src="./logout.js"></script>
+  
+
+</head>
+
+<body>
+  <div class="icon-bar">
+    <a href="chat.html">Group chat</a>
+    <a href="manage_user.html">Manage users</a>
+    <a href="Manage_documents.html">Manage documents</a>
+    <a href="./logout_page.html">Logout</a>
+  </div>
+
+
+
+  <h1>My Uploads</h1><br>
+  <table class="table-box">
+    <thead>
+      <tr class="table-row">
+        <th class="table-cell1">Name</th>
+        <th class="table-cell1">User Email ID</th>
+        <th class="table-cell1">Action</th>
+      </tr>
+    </thead>
+    <tbody id="root">
+    </tbody>
+  </table>
+
+  <script type="text/javascript" src="App2.js"></script>
+  <!--External Js file-->
+
+  </table>
+
+  <div class="b1">
+    <div class="container">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+        +Add Upload
+      </button>
+    </div>
+
+    <form action="Manage_documents.html" onsubmit="return uploadFile()">
+      <div class="modal" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+
+
+            <div class="modal-header">
+              <h4 class="modal-title">Document</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+
+            <div class="modal-body">
+              <div>File description</div>
+              <input type="text" id="name">
+            </div>
+
+            <div class="modal-body">
+              <div>File upload</div>
+              <input type="file" id="upload">
+            </div>
+
+
+            <div class="modal-body">
+
+              <input type="submit" value="Upload File">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+
+  </div>
+  </form>
+
+
+</body>
+
+</html>

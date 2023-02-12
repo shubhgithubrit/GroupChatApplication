@@ -1,0 +1,123 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.welcome1{
+   width: 500px;
+   height: 420px;
+align-items: center;
+   top:10%;
+   left:30%;
+   position: absolute;
+
+padding: 70px 40px;
+text-align: center;
+}
+
+.login_form1{
+    width: 500px;
+    height: 420px;
+ align-items: center;
+    top:10%;
+    left:30%;
+    position: absolute;
+ 
+ padding: 70px 40px;
+ text-align: center;
+ }
+ 
+
+.buttons{
+padding: 4px 40px;
+text-align: center;
+
+font-size: 15px;
+background-color:white;
+border-radius: 10px;
+background-color: aqua;
+}
+.icon-bar {
+   width: 100%;
+   background-color:#bfbfbf;
+   overflow: auto;
+   outline: 1px  solid black; 
+    
+ }
+ .icon-bar a {
+   float: left;
+   width: 20%;
+   text-align: center;
+   padding: 12px 33px;
+   transition: all 0.3s ease;
+   color: black;
+   font-size: 15px;
+   
+   outline: 1px  solid black;
+ }
+ 
+ .icon-bar a:hover {
+   background-color:white;
+   
+ }
+ 
+ .table-box{
+   margin: 50px auto;
+   width: 80%;
+   outline: 2px solid black;
+ }
+ .table-row{
+   display: table;
+   width: 100%;
+   margin: 10px auto;
+   background-color: transparent;
+   padding: 1px 0;
+   font-size: 15px;
+      color: #555;
+    
+ }
+.table-cell1{
+   display: table-cell;
+   width: 30%;
+   text-align: center;
+   padding: 1px 0;
+   border-right: 1px solid #d6d4d4;
+   vertical-align: middle;
+   background-color: #bfbfbf;
+   outline: 1px solid black;
+ 
+}
+.table-cell2{
+   display: table-cell;
+   width: 30%;
+   text-align: center;
+   padding: 1px 0;
+   border-right: 1px solid #d6d4d4;
+   vertical-align: middle;
+   outline: 1px solid black;
+
+   background-color: white;
+}
+.table-cell3{
+   display: table-cell;
+   width: 30%;
+   text-align: center;
+   padding: 1px 0;
+   border-right: 1px solid #d6d4d4;
+   vertical-align: middle;
+   outline: 1px solid black;
+   background-color:#f0f0f0;
+}
+.box1{
+   height: 200;
+   width: 400;
+   background-color: blue;
+}
+.b1{
+   display:block;
+   justify-content:end;
+   float: left;
+   margin-top: 400px;
+}
+  
+

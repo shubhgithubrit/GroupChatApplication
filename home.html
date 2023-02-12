@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF=8">
+    <meta http-equiv="X-UA_Compatible" content="IE-edge">
+    <meta name="viewport" content="width-device-width,initial-scale=1.5">
+    <link rel="stylesheet" href="./style.css"> <!-- External CSS -->
+    <script type="text/javascript" src="./App.js"></script>
+    <script src="./logout.js"></script>
+
+    <!--External Js file-->
+</head>
+<title>Kellton tech</title>
+
+<body>
+
+    <form action=" " onload="validation()">
+
+        <div class="icon-bar">
+            <a href="chat.html">Group chat</a>
+            <a href="manage_user.html">Manage users</a>
+            <a href="Manage_documents.html">Manage documents</a>
+            <a href="./logout_page.html">Logout</a>
+        </div>
+        <center>
+            <table>
+                <tr>
+                    <td><h1>Login Successfully!!</h1></td>
+                </tr>
+            </table>
+            <table>
+            
+                <tr>
+                    <td><b>Welcome</b>&nbsp;</td><br><br><br><br><br><br>
+                    <td>
+                        <script>
+
+                            var logedInUser = JSON.parse(localStorage.getItem('currentUser'));
+                            var Email = logedInUser.email;
+                            document.write(Email);
+
+                        </script>
+
+                    </td>
+
+
+                </tr>
+            </table>
+        </center>
+
+
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!-- Chatting page -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+
+    <title> Chat Application</title>
+    <meta name="description" content="Tuts+ Chat Application" />
+
+    <link rel="stylesheet" href="./chat_style.css">
+    <!--External CSS file-->
+    <link rel="stylesheet" href="./style.css">
+    <script type="text/javascript" src="./App.js"></script>
+    <!--External Js file-->
+    <script src="./logout.js"></script>
+  
+</head>
+
+<body>
+    <div class="icon-bar">
+        <a href="chat.html">Group chat</a>
+        <a href="manage_user.html">Manage users</a>
+        <a href="Manage_documents.html">Manage documents</a>
+        <a href="welcome.html">Logout</a>
+
+
+
+
+
+    </div>
+
+
+    <div id="wrapper">
+        <div id="menu">
+
+            <p class="welcome" style="text-align: center;">Group Chat<b></b></p>
+
+            <p class="logout"><a class="exit" href="./home.html">Exit Chat</a></p>
+
+        </div>
+
+        <div id="chatbox">
+            <script>
+
+                var userchat = JSON.parse(localStorage.getItem("chatlist"));
+
+                for (var i = 0; i < userchat.length; i++) {
+                    document.write("[");
+                    document.write(userchat[i].date);
+                    document.write("]");
+
+                    document.write(userchat[i].name);
+                    document.write("<b>::</b>");
+                    document.write("  " + userchat[i].usermessage + "<br>");
+                }
+            </script>
+
+        </div>
+
+        <form action="" onsubmit="return chat()">
+            <div>
+            </div>
+
+            <div>
+
+
+                <script>
+
+                    var logedInUser = JSON.parse(localStorage.getItem('currentUser'));
+                    var name1 = logedInUser.name;
+                    document.write(name1);
+
+                </script>
+
+                <input name="usermsg" type="text" id="usermessage">
+                <input type="submit" id="submitmessage" value="Send">
+                <input type="submit" id="submitmessage" value="Refresh">
+
+            </div>
+        </form>
+
+
+</body>
+
+</html>

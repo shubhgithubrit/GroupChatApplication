@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var getdocDataFromLocalStorage = JSON.parse(localStorage.getItem("doclist"));//get item from local storage
+var usersDoc = getdocDataFromLocalStorage ? getdocDataFromLocalStorage : [];
+
+function doc() {//chat function
+    debugger;
+    var  file= document.getElementById("file").value;//users input box
+    var save= document.getElementById("save").value;//send button
+
+    if (file == "") {
+        alert("Empty file could not save");
+        return false;
+    }
+    var dataObj2 = {
+        id: Number(new Date()),
+    
+        file:file,
+        
+    }
+
+    usersDoc.push(dataObj2);
+    localStorage.setItem("doclist", JSON.stringify(usersDoc));
+
+    return true;
+
+}
+
+    </script>
+</head>
+<body>
+    <form action="" onsubmit="return doc()">
+    <table>
+        <tr>
+            <td>
+                <input type="file" id="file">
+                <input type="submit" id="save" value="Save">
+
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

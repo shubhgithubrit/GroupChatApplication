@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF=8">
+    <meta http-equiv="X-UA_Compatible" content="IE-edge">
+    <meta name="viewport" content="width-device-width,initial-scale=1.5">
+    <link rel="stylesheet" href="./style.css">
+    <script type="text/javascript" src="./App.js"></script>
+
+</head>
+<title>Kellton tech</title>
+
+<body>
+    <div class="icon-bar">
+        <a href="chat.html">Group chat</a>
+        <a href="manage_user.html">Manage users</a>
+        <a href="Manage_documents.html">Manage documents</a>
+        <a href="./logout_page.html">Logout</a>
+
+
+
+
+
+    </div>
+
+
+    <form action="manage_user.html" onsubmit="return update()">
+        <div class="login_form1">
+            <h1>Edit User Information</h1>
+            
+        
+           <label><b>Full Name</b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text"  id="name" ><br>
+            <br>
+            <label><b>Email</b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" id="email" >
+            <br>
+            <br>
+            <input type="submit" value="Save">
+
+
+
+        </div>
+    </form>
+    <script>
+        
+         let getDataFromLocalStorage = JSON.parse(localStorage.getItem("userslist"));
+        let users = getDataFromLocalStorage ? getDataFromLocalStorage : [];
+        let url = window.location.href;
+    let splitUrl = url.split("=");
+    let id1 = splitUrl[1];
+    for (var i = 0; i < users.length; i++) {
+        if (id1 == users[i].id) {
+            let username = users[i].name;
+                    let email = users[i].email;
+                    if (username) {
+                        document.getElementById("name").value = username;
+                    }
+
+                    if (email) {
+                        document.getElementById("email").value = email;
+                    }
+                }
+            }
+   
+    </script>
+   
+</body>
+
+</html>
